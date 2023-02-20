@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Student Test Score prsdiction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #e3f2fd;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color:black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #e3f2fd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li style="float:right"><a class="active" href="#about">About</a>
+    </ul>
+
+    <h2>Fill the Study Hours and IQ of any student and check the score of upcoming test</h2>
+    <form>
+      <div class="form-group">
+        <label for="num1">Study Hours:</label>
+        <input type="number" id="num1" name="num1" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="num2">IQ:</label>
+        <input type="number" id="num2" name="num2" class="form-control">
+      </div>
+      <div>
+        <input type="button" value="Check Your Score" onclick="addNumbers()" class="btn btn-success">
+      </div>
+    </form>
+    <script>
+      function addNumbers() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var sum = 20 + (num1 * .5 + num2 * .5);
+        alert("Your Predicted score is " + sum);
+      }
+    </script>
+  </div>
+
+</body>
+
+</html>
